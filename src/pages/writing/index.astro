@@ -14,7 +14,7 @@ const posts = await getPublishedPosts();
 		<div class="container">
 			<h1 class="page-title">{writing.title}</h1>
 			<p class="page-desc">{writing.description}</p>
-			<p class="page-hint">{writing.hint}</p>
+			{writing.hint && <p class="page-hint">{writing.hint}</p>}
 
 			{posts.length === 0 ? (
 				<p class="empty-state">{writing.emptyMessage}</p>

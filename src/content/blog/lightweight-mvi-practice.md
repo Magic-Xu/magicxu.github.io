@@ -10,6 +10,7 @@ lang: "zh-CN"
 
 > 标签：Android / MVI / 架构  
 > 预计阅读：8 分钟
+> Pulse 项目地址：[https://github.com/Magic-Xu/pulse](https://github.com/Magic-Xu/pulse)
 
 ## 背景
 
@@ -40,7 +41,7 @@ MVI 对复杂页面的价值很明确：
 
 ## 在 Pulse 里的实践取向
 
-我在 [Pulse](https://github.com/Magic-Xu/pulse) 里更关注的是工程可落地，而不是概念完整性。核心方向有三点。
+我在 Pulse 里更关注的是工程可落地，而不是概念完整性。核心方向有三点。
 
 ### 1. 降低心智负担
 
@@ -82,3 +83,5 @@ MVI 对复杂页面的价值很明确：
 > 架构的价值，不在于看起来多优雅，而在于能否让团队持续、高质量地解决问题。
 
 如果你也在做 Android 状态管理或 MVI 工程化实践，欢迎交流你踩过的坑和有效做法。
+
+项目地址：<https://github.com/Magic-Xu/pulse>

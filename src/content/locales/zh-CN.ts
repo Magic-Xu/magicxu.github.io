@@ -66,7 +66,7 @@ export const zhCN: LocaleContent = {
 					"一个基于 Astro 搭建的轻量个人站，用于沉淀项目、写作与长期个人表达。",
 				stack: ["Astro", "GitHub Pages", "CSS"],
 				linkHref: "#",
-				linkLabel: "站点链接（占位）"
+				linkLabel: "查看站点"
 			},
 			{
 				name: "AI Pet Mood",
@@ -75,7 +75,7 @@ export const zhCN: LocaleContent = {
 					"一个面向宠物场景的 AI 趣味产品尝试，关注图像理解、情绪表达与轻量交互体验。",
 				stack: ["Android", "AI", "Product Design"],
 				linkHref: "#",
-				linkLabel: "项目链接（占位）"
+				linkLabel: "了解项目"
 			}
 		]
 	},
@@ -83,8 +83,8 @@ export const zhCN: LocaleContent = {
 		metaTitle: "Writing",
 		metaDescription: "工程实践、AI 产品与独立开发写作",
 		title: "Writing",
-		description: "面向长期写作的文章列表页。",
-		hint: "列表结构已按文章元数据组织，后续可平滑切换到 Markdown 内容源。",
+		description: "记录 Android 工程、AI 实践与产品思考。",
+		hint: "",
 		emptyMessage: "暂时还没有可展示的文章。"
 	},
 	footer: {
