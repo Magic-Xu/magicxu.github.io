@@ -1,6 +1,6 @@
 ---
 import { getLocaleContent } from "../content";
-import { siteConfig } from "../config/site";
+import { siteConfig } from "../data/site";
 
 const pathname = Astro.url.pathname;
 const content = getLocaleContent();
@@ -11,7 +11,7 @@ const isActive = (href: string) => pathname === href;
 
 <header class="site-header">
 	<div class="container header-inner">
-		<a class="site-brand" href="/">{siteConfig.name}</a>
+		<a class="site-brand" href="/">{siteConfig.title}</a>
 		<nav class="site-nav" aria-label="主导航">
 			{links.map((item) => (
 				<a class={isActive(item.href) ? "nav-link active" : "nav-link"} href={item.href}>

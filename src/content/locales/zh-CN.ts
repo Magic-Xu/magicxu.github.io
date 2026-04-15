@@ -1,5 +1,5 @@
 import type { LocaleContent } from "../types";
-import { siteConfig } from "../../config/site";
+import { siteConfig } from "../../data/site";
 
 export const zhCN: LocaleContent = {
 	navigation: [
@@ -10,13 +10,13 @@ export const zhCN: LocaleContent = {
 	home: {
 		metaTitle: "首页",
 		metaDescription: "轻量、克制、偏工程师气质的个人站首页",
-		title: siteConfig.name,
+		title: siteConfig.title,
 		subtitle: "Android 工程师 / AI 探索者 / 独立开发者",
-		slogan: "Having witnessed the industry's tides, I still weave code into my life.",
+		slogan: siteConfig.slogan,
 		intro:
 			"我长期专注 Android 工程实践，也持续在 AI 产品方向做实验。相比追逐概念，我更在意问题边界是否清晰、方案是否可维护，以及结果能否被真实使用。对我来说，工程的价值在于把想法打磨成稳定、可交付的产品。",
 		actions: [
-			{ href: siteConfig.links.github, label: "GitHub", external: true, variant: "primary" },
+			{ href: siteConfig.github, label: "GitHub", external: true, variant: "primary" },
 			{ href: "/projects", label: "Projects", variant: "secondary" },
 			{ href: "/writing", label: "Writing", variant: "secondary" },
 			{ href: "/about", label: "About", variant: "secondary" }
