@@ -26,6 +26,7 @@ const posts = await getPublishedPosts();
 							summary={post.data.description}
 							date={formatPubDate(post.data.pubDate)}
 							tags={post.data.tags}
+							readingTime={post.data.readingTime}
 							href={`/writing/${post.id}/`}
 						/>
 					))}

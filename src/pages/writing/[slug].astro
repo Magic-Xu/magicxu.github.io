@@ -25,7 +25,10 @@ const { Content } = await render(post);
 			<article class="article-detail">
 				<header class="article-header">
 					<h1 class="page-title">{post.data.title}</h1>
-					<p class="meta-line">发布日期：{formatPubDate(post.data.pubDate)}</p>
+					<p class="meta-line">
+						发布日期：{formatPubDate(post.data.pubDate)}
+						{post.data.readingTime && <> · 预计阅读 {post.data.readingTime} 分钟</>}
+					</p>
 					{post.data.tags && post.data.tags.length > 0 && (
 						<ul class="tag-list" aria-label="文章标签">
 							{post.data.tags.map((tag) => <li>{tag}</li>)}

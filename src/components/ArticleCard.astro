@@ -5,13 +5,17 @@ interface Props {
 	date: string;
 	href: string;
 	tags?: string[];
+	readingTime?: number;
 }
 
-const { title, summary, date, href, tags = [] } = Astro.props;
+const { title, summary, date, href, tags = [], readingTime } = Astro.props;
 ---
 
 <article class="article-card">
-	<p class="meta-line">发布日期：{date}</p>
+	<p class="meta-line">
+		发布日期：{date}
+		{readingTime && <> · 预计阅读 {readingTime} 分钟</>}
+	</p>
 	<h3>{title}</h3>
 	<p>{summary}</p>
 	{tags.length > 0 && (
