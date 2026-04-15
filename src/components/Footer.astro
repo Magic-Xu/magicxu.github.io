@@ -8,7 +8,10 @@ const content = getLocaleContent();
 
 <footer class="site-footer">
 	<div class="container footer-inner">
-		<p>© {year} {siteConfig.title}. {content.footer.note}</p>
+		<div>
+			<p class="footer-copy">© {year} {siteConfig.title}. {content.footer.note}</p>
+			<p class="footer-note">{siteConfig.description}</p>
+		</div>
 		<div class="footer-links">
 			<a href={siteConfig.github} target="_blank" rel="noreferrer">{content.footer.githubLabel}</a>
 			<a href={`mailto:${siteConfig.email}`}>{content.footer.emailLabel}</a>
