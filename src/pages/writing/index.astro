@@ -1,0 +1,36 @@
+---
+import ArticleCard from "../../components/ArticleCard.astro";
+import { getLocaleContent } from "../../content";
+import { formatPubDate, getPublishedPosts } from "../../lib/blog";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const content = getLocaleContent();
+const { writing } = content;
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout title={writing.metaTitle} description={writing.metaDescription}>
+	<section class="section">
+		<div class="container">
+			<h1 class="page-title">{writing.title}</h1>
+			<p class="page-desc">{writing.description}</p>
+			<p class="page-hint">{writing.hint}</p>
+
+			{posts.length === 0 ? (
+				<p class="empty-state">{writing.emptyMessage}</p>
+			) : (
+				<div class="card-grid writing-grid">
+					{posts.map((post) => (
+						<ArticleCard
+							title={post.data.title}
+							summary={post.data.description}
+							date={formatPubDate(post.data.pubDate)}
+							tags={post.data.tags}
+							href={`/writing/${post.id}/`}
+						/>
+					))}
+				</div>
+			)}
+		</div>
+	</section>
+</BaseLayout>

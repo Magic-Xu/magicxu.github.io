@@ -83,34 +83,9 @@ export const zhCN: LocaleContent = {
 		metaTitle: "Writing",
 		metaDescription: "工程实践、AI 产品与独立开发写作",
 		title: "Writing",
-		description: "面向长期写作的文章列表页，当前为占位内容。",
+		description: "面向长期写作的文章列表页。",
 		hint: "列表结构已按文章元数据组织，后续可平滑切换到 Markdown 内容源。",
-		items: [
-			{
-				slug: "android-state-management-boundary",
-				title: "Android 状态管理的边界：从可跑到可维护",
-				summary: "结合一次业务重构，讨论状态建模、模块边界和调试效率之间的平衡。",
-				date: "2026-04-06",
-				category: "Android 工程实践",
-				href: "#"
-			},
-			{
-				slug: "ai-indie-delivery-loop",
-				title: "AI 功能做进独立产品前，先回答这三个工程问题",
-				summary: "围绕延迟、成本与可解释性，拆解 AI 能力从 Demo 到可用功能的关键路径。",
-				date: "2026-03-22",
-				category: "AI 与独立开发",
-				href: "#"
-			},
-			{
-				slug: "product-0to1-rhythm",
-				title: "从 0 到 1 的节奏感：什么时候该快，什么时候该慢",
-				summary: "记录一个小产品从想法、验证到上线的决策过程，以及工程视角下的取舍。",
-				date: "2026-03-05",
-				category: "产品从 0 到 1",
-				href: "#"
-			}
-		]
+		emptyMessage: "暂时还没有可展示的文章。"
 	},
 	footer: {
 		note: "保持热忱，持续交付。",

@@ -19,15 +19,6 @@ export interface ProjectItem {
 	linkLabel: string;
 }
 
-export interface ArticleItem {
-	slug: string;
-	title: string;
-	summary: string;
-	date: string;
-	category: string;
-	href: string;
-}
-
 export interface LocaleContent {
 	navigation: NavItem[];
 	home: {
@@ -63,7 +54,7 @@ export interface LocaleContent {
 		title: string;
 		description: string;
 		hint: string;
-		items: ArticleItem[];
+		emptyMessage: string;
 	};
 	footer: {
 		note: string;

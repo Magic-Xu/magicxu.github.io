@@ -3,16 +3,21 @@ interface Props {
 	title: string;
 	summary: string;
 	date: string;
-	category: string;
 	href: string;
+	tags?: string[];
 }
 
-const { title, summary, date, category, href } = Astro.props;
+const { title, summary, date, href, tags = [] } = Astro.props;
 ---
 
 <article class="article-card">
-	<p class="meta-line">{category} · {date}</p>
+	<p class="meta-line">发布日期：{date}</p>
 	<h3>{title}</h3>
 	<p>{summary}</p>
-	<a class="text-link" href={href}>阅读全文（占位）</a>
+	{tags.length > 0 && (
+		<ul class="tag-list" aria-label="文章标签">
+			{tags.map((tag) => <li>{tag}</li>)}
+		</ul>
+	)}
+	<a class="text-link" href={href}>阅读全文</a>
 </article>
