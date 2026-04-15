@@ -1,17 +1,31 @@
 ---
+import { getLocaleContent } from "../content";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const content = getLocaleContent();
+const { home } = content;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={home.metaTitle} description={home.metaDescription}>
+	<section class="section home-hero">
+		<div class="container home-copy">
+			<h1>{home.title}</h1>
+			<p class="home-subtitle">{home.subtitle}</p>
+			<p class="home-slogan">{home.slogan}</p>
+			<p class="home-intro">{home.intro}</p>
+
+			<div class="action-row" aria-label="首页快捷入口">
+				{home.actions.map((action) => (
+					<a
+						class={action.variant === "primary" ? "button primary" : "button secondary"}
+						href={action.href}
+						target={action.external ? "_blank" : undefined}
+						rel={action.external ? "noreferrer" : undefined}
+					>
+						{action.label}
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import { getLocaleContent } from "../content";
+import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const content = getLocaleContent();
+const { projects } = content;
+---
+
+<BaseLayout title={projects.metaTitle} description={projects.metaDescription}>
+	<section class="section">
+		<div class="container">
+			<h1 class="page-title">{projects.title}</h1>
+			<p class="page-desc">{projects.description}</p>
+			<div class="card-grid">
+				{projects.items.map((project) => <ProjectCard {...project} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

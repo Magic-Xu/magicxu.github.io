@@ -1,0 +1,17 @@
+---
+import { getLocaleContent } from "../content";
+import { siteConfig } from "../config/site";
+
+const year = new Date().getFullYear();
+const content = getLocaleContent();
+---
+
+<footer class="site-footer">
+	<div class="container footer-inner">
+		<p>© {year} {siteConfig.name}. {content.footer.note}</p>
+		<div class="footer-links">
+			<a href={siteConfig.links.github} target="_blank" rel="noreferrer">{content.footer.githubLabel}</a>
+			<a href={`mailto:${siteConfig.links.email}`}>{content.footer.emailLabel}</a>
+		</div>
+	</div>
+</footer>
