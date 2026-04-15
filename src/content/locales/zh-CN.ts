@@ -12,7 +12,7 @@ export const zhCN: LocaleContent = {
 		metaDescription: "轻量、克制、偏工程师气质的个人站首页",
 		title: siteConfig.name,
 		subtitle: "Android 工程师 / AI 探索者 / 独立开发者",
-		slogan: "见过浪潮起落，仍愿把代码写向真实问题。",
+		slogan: "Having witnessed the industry's tides, I still weave code into my life.",
 		intro:
 			"我长期专注 Android 工程实践，也持续在 AI 产品方向做实验。相比追逐概念，我更在意问题边界是否清晰、方案是否可维护，以及结果能否被真实使用。对我来说，工程的价值在于把想法打磨成稳定、可交付的产品。",
 		actions: [
